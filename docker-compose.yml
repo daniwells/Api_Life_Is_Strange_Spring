@@ -1,0 +1,31 @@
+version: '3.9'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: daniwellslemons/apilifeisstrange:latest
+    container_name: spring-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/lifeisstrange
+      SPRING_DATASOURCE_USERNAME: daniel
+      SPRING_DATASOURCE_PASSWORD: postgres
+
+  db:
+    image: postgres:14.13
+    container_name: postgres-db
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: daniel
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: lifeisstrange
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
