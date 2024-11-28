@@ -46,7 +46,7 @@ Para iniciar todos os processo da aplicação, incluindo a api e o banco de dado
 
 ## Licença :page_with_curl:
 
-O site Ritmo da Forma está sob a licença [MIT LICENSE](LICENCE).
+O site Ritmo da Forma está sob a licença [GPL LICENSE](LICENCE).
 
 ## Autores :black_nib:
 
