@@ -3,7 +3,7 @@
 A api Life is Strange nada mais é do que um estudo sobre o desenvolvimento de APIs com Spring Boot e Java Hibernate. Esta contempla principalmente cruds e endpoints completos, juntamente com uma organização de projeto baseada no modelo DTO (Data Transfer Object).
 
 ## Tecnologias Utilizadas :hammer:
-* [Java](https://www.java.com/pt-BR/) - Linguagem
+* [Java](https://www.java.com/pt-BR/) - Linguagem de Programação
 * [Spring Boot](https://spring.io/) - Framework
 * [Hibernate](https://hibernate.org/) - Ferramenta ORM
 * [Liquibase](https://www.liquibase.com/) - Gerenciador de migrações
@@ -12,7 +12,7 @@ A api Life is Strange nada mais é do que um estudo sobre o desenvolvimento de A
 * [Docker](https://www.docker.com/) - Gerenciador de containers
 
 ## Dependências necessárias :arrow_up:
-    Docker CLI ou Docker Desktop
+    Docker - Versão 27.3.1
     Docker Compose
     
 ## Como executar o projeto :mortar_board:
