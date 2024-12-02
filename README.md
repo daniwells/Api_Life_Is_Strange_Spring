@@ -2,6 +2,11 @@
 
 A api Life is Strange nada mais é do que um estudo sobre o desenvolvimento de APIs com Spring Boot e Java Hibernate. Esta contempla principalmente cruds e endpoints completos, juntamente com uma organização de projeto baseada no modelo DTO (Data Transfer Object).
 
+## Documentação API
+Toda a nossa documentação foi desenvolvida de forma automática e dinâmica, usando a biblioteca swagger, com ela você poderá verificar os nossos endpoints e modelos.
+
+Link: https://app.swaggerhub.com/apis/DANIELLIMAFREITA/apilifeisstrange/1.0.0
+
 ## Tecnologias Utilizadas :hammer:
 * [Java](https://www.java.com/pt-BR/) - Linguagem de Programação
 * [Spring Boot](https://spring.io/) - Framework
