@@ -7,11 +7,10 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-public class CharacterSchema {
+@NoArgsConstructor
+public class LocalsSchema {
     private Integer id;
     private String name;
-    private Integer age;
     private String description;
 }

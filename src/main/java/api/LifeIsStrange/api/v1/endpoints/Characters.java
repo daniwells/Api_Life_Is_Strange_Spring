@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,16 +21,12 @@ import org.springframework.web.bind.annotation.RestController;
 import api.LifeIsStrange.schemas.CharacterSchema;
 
 @RestController
-@RequestMapping("/life_is_strange/characters")
+@RequestMapping("life_is_strange/characters")
 public class Characters {
     private List<CharacterSchema> characters = new ArrayList<>();
 
     public Characters(){
         characters.add(new CharacterSchema(1, "João", 14, "description"));
-    }
-
-    public String getMethodName(@RequestParam String param) {
-        return new String();
     }
     
     @GetMapping
@@ -42,7 +37,7 @@ public class Characters {
         return new ResponseEntity<>(characters, HttpStatus.OK);
     }
 
-    @GetMapping("/life_is_strange/characters/{id}")
+    @GetMapping("life_is_strange/characters/{id}")
     public ResponseEntity<CharacterSchema> getCharacter(@PathVariable Integer id){
         Optional<CharacterSchema> character = characters.stream().filter(C -> C.getId().equals(id)).findFirst();
         if(character.isPresent()){
@@ -71,7 +66,7 @@ public class Characters {
     }
 
     @DeleteMapping("life_is_strange/characters/{id}")
-    public ResponseEntity<String> deleteCat(@PathVariable Integer id) {
+    public ResponseEntity<String> deleteLocal(@PathVariable Integer id) {
 
         for(int i = 0; i < characters.size(); i++){
             if(characters.get(i).getId().equals(id)){

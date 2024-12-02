@@ -1,31 +1,20 @@
 package api.LifeIsStrange.schemas;
 
-import lombok.Getter;
-import lombok.Setter;
 import java.util.List;
 
-public class RelationshipsSchema {
-    @Getter
-    @Setter
-    private Integer id;
-    @Getter
-    @Setter
-    private String names;
-    @Getter
-    @Setter
-    private String relationshipType;
-    @Getter
-    @Setter
-    private String description;
-    @Getter
-    @Setter
-    private List<String> keyMoments;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
-    public RelationshipsSchema(Integer id, String names, String relationshipType, String description, List<String> keyMoments){
-        this.id = id;
-        this.names = names;
-        this.relationshipType = relationshipType;
-        this.description = description;
-        this.keyMoments = keyMoments;
-    }
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class RelationshipsSchema {
+    private Long id;
+    private String name;
+    private String relationshipType;
+    private List<String> keyMoments;
+    private String description;
 }
