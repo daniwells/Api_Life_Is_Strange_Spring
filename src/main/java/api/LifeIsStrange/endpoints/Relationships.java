@@ -1,4 +1,4 @@
-package api.LifeIsStrange.api.v1.endpoints;
+package api.LifeIsStrange.endpoints;
 
 // Libs
 import java.util.ArrayList;

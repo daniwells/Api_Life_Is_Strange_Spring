@@ -12,9 +12,9 @@ import lombok.AllArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RelationshipsSchema {
-    private Long id;
-    private String name;
+    private Integer id;
+    private String names;
     private String relationshipType;
-    private List<String> keyMoments;
     private String description;
+    private List<String> keyMoments;
 }
