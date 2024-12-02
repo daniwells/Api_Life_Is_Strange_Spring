@@ -3,7 +3,7 @@
 A api Life is Strange nada mais é do que um estudo sobre o desenvolvimento de APIs com Spring Boot e Java Hibernate. Esta contempla principalmente cruds e endpoints completos, juntamente com uma organização de projeto baseada no modelo DTO (Data Transfer Object).
 
 ## Importante :loudspeaker:
-Antes de tudo, é importante observar que este projeto foi divídido em duas versões separadas por branches, na branch <b>"main"</b> você encontrará um sistema sem qualquer conexão com um banco de dados relacional, apenas com vetores e arrays usados para armazenar dados temporariamente, já a segunda versão é encontrada na branch <b>"fullApi"</b> a qual não só consta uma conxão com o postgres, como diversos outros mecânismos e tecnologias que estão descritos neste documento.
+Antes de tudo, é importante observar que este projeto foi divídido em duas versões separadas por branches, na branch <b>"main"</b> você encontrará um sistema sem qualquer conexão com um banco de dados relacional, apenas com vetores e arrays usados para armazenar dados temporariamente, já a segunda versão é encontrada na branch <b>"full_api"</b> a qual não só consta uma conxão com o postgres, como diversos outros mecânismos e tecnologias que estão descritos neste documento.
 
 ## Documentação API :book:
 Toda a nossa documentação foi desenvolvida de forma automática e dinâmica, usando a biblioteca swagger, com ela você poderá verificar os nossos endpoints e modelos.
