@@ -3,8 +3,6 @@ package api.LifeIsStrange.endpoints.v1;
 // Libs
 import java.util.List;
 import java.util.Optional;
-
-// Spring
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.HttpStatus;
@@ -44,7 +42,7 @@ public class Characters {
 
     @GetMapping("/ordering")
     public List<CharactersModel> getAllCharactersOrdering() {
-        return this.charactersService.getAllCharacters(true);
+        return this.charactersService.getAllCharacters("ordering");
     }
 
     @GetMapping("/pagination/{page}")

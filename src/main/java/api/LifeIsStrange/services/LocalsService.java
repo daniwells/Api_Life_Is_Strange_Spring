@@ -1,12 +1,18 @@
 package api.LifeIsStrange.services;
 
-import api.LifeIsStrange.models.LocalsModel;
-import api.LifeIsStrange.repositories.LocalsRepository;
+// Libs
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import java.util.List;
 import java.util.Optional;
+
+// Classes
+import api.LifeIsStrange.models.LocalsModel;
+import api.LifeIsStrange.repositories.LocalsRepository;
 
 @Service
 public class LocalsService {
@@ -23,6 +29,11 @@ public class LocalsService {
 
     public List<LocalsModel> getAllLocals() {
         return localsRepository.findAll();
+    }
+
+    public Page<LocalsModel> getLocalsPagination(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return localsRepository.findAll(pageable);
     }
 
     public void deleteLocal(Long id) {

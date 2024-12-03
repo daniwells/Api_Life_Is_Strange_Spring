@@ -3,12 +3,11 @@ package api.LifeIsStrange.endpoints.v1;
 // Libs
 import java.util.List;
 import java.util.Optional;
-
-// Spring
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.data.domain.Page;
 
 // Classes
 import api.LifeIsStrange.models.RelationshipsModel;
@@ -39,6 +38,12 @@ public class Relationships {
     @GetMapping
     public List<RelationshipsModel> getAllRelationships() {
         return this.relationshipsService.getAllRelationships();
+    }
+
+    @GetMapping("/pagination/{page}")
+    public List<RelationshipsModel> getAllRelationshipsPagination(@PathVariable Integer page) {
+        Page<RelationshipsModel> relationshipsPage = this.relationshipsService.getRelationshipsPagination(page, 5);
+        return relationshipsPage.getContent(); 
     }
 
     @PutMapping("/{id}")

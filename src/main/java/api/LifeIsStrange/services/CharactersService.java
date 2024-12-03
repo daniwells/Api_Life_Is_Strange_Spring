@@ -1,20 +1,18 @@
 package api.LifeIsStrange.services;
 
-import api.LifeIsStrange.models.CharactersModel;
-import api.LifeIsStrange.repositories.CharactersRepository;
+// libs
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-// Paginação
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-
-// Ordenação
 import org.springframework.data.domain.Sort;
-
 import java.util.List;
 import java.util.Optional;
+
+// Classses
+import api.LifeIsStrange.models.CharactersModel;
+import api.LifeIsStrange.repositories.CharactersRepository;
 
 @Service
 public class CharactersService {
@@ -34,8 +32,8 @@ public class CharactersService {
     }
 
 
-    public List<CharactersModel> getAllCharacters(Boolean sortBy) {
-        if (sortBy) {
+    public List<CharactersModel> getAllCharacters(String sortBy) {
+        if ("ordering".equalsIgnoreCase(sortBy)) {
             return charactersRepository.findAll(Sort.by(Sort.Direction.ASC, "age"));
         } else {
             return charactersRepository.findAll();

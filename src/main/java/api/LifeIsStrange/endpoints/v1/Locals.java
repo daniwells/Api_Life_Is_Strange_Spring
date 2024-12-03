@@ -3,12 +3,11 @@ package api.LifeIsStrange.endpoints.v1;
 // Libs
 import java.util.List;
 import java.util.Optional;
-
-// Spring
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.data.domain.Page;
 
 // Classes
 import api.LifeIsStrange.models.LocalsModel;
@@ -39,6 +38,12 @@ public class Locals {
     @GetMapping
     public List<LocalsModel> getAllLocals() {
         return this.localsService.getAllLocals();
+    }
+
+    @GetMapping("/pagination/{page}")
+    public List<LocalsModel> getAllLocalsPagination(@PathVariable Integer page) {
+        Page<LocalsModel> localsPage = this.localsService.getLocalsPagination(page, 5);
+        return localsPage.getContent(); 
     }
 
     @PutMapping("/{id}")
