@@ -53,7 +53,7 @@ Para iniciar todos os processo da aplicação, incluindo a api e o banco de dado
 <b>Com essas configurações você já poderá aproveitar o nosso sistema!</b>
 
 ## Acesso ao banco de dados :key:
-Neste projeto utilizamos o banco de dados PostgreSQL. Uma insância dele será criada em um container assim que a aplicação for executada, juntamente com o banco <b>"lifesstrange", um email e senha para o acesso,</b> além das tabelas da api que são <b>characters, locas e relationships.</b>
+Neste projeto utilizamos o banco de dados PostgreSQL. Uma insância dele será criada em um container assim que a aplicação for executada, juntamente com o banco <b>"lifesstrange", um email e senha para o acesso,</b> além das tabelas da api, <b>characters, locas e relationships.</b>
 
 Para acessar a nossa base você pode seguir este passo a passo:
 
