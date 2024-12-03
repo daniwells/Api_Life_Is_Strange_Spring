@@ -52,6 +52,29 @@ Para iniciar todos os processo da aplicação, incluindo a api e o banco de dado
 
 <b>Com essas configurações você já poderá aproveitar o nosso sistema!</b>
 
+## Acesso ao banco de dados :key:
+Neste projeto utilizamos o banco de dados PostgreSQL. Uma insância dele será criada em um container assim que a aplicação for executada, juntamente com o banco <b>"lifesstrange", um email e senha para o acesso,</b> além das tabelas da api que são <b>characters, locas e relationships.</b>
+
+Para acessar a nossa base você pode seguir este passo a passo:
+
+#### 🔴 1. Executar base de dados
+Como foi comentado anteriormente, assim que a aplicação for executada um container com o postgres já estará em execução, mas para conferir o sistema você pode acessá-lo via terminal ou um editor de banco de dados, nete exemplo utilizamos o bash.
+
+    docker ps # Verificar hash do container
+    docker exec -it <hash_container> bash
+
+#### 🔴 2. Logar no banco
+Para logar no banco <b>"lifeisstrange"</b> e acessar as tabelas, você pode usar as credenciais abaixo.
+
+    Usuário: daniel
+    Senha: postgres
+
+Com isto, você pode efetuar o login.
+
+    psql -U daniel -d lifeisstrange
+
+<b>obs:</b> Esta é a única conta com permissões de acesso ao banco, além de estar registrada nas variáveis do spring.
+
 ## Licença :page_with_curl:
 
 O site Ritmo da Forma está sob a licença [GPL LICENSE](LICENCE).
