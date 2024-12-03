@@ -1,6 +1,5 @@
 package api.LifeIsStrange.models;
 
-// Libs
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -14,20 +13,17 @@ import lombok.AllArgsConstructor;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import java.util.List;
-
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "relationships")
-public class RelationshipsModel {
+@Table(name = "relationships_characters")
+public class RelationshipsCharactersModel {
     @Id
     @JsonIgnore
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String relationshipType;
-    private List<String> keyMoments;
+    private Integer characterId;
+    private Integer relationshipId;
 }

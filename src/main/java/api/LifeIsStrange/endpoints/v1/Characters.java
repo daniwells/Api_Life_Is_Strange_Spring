@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.data.domain.Page;
 
 // Classes
 import api.LifeIsStrange.models.CharactersModel;
@@ -39,6 +40,17 @@ public class Characters {
     @GetMapping
     public List<CharactersModel> getAllCharacters() {
         return this.charactersService.getAllCharacters();
+    }
+
+    @GetMapping("/ordering")
+    public List<CharactersModel> getAllCharactersOrdering() {
+        return this.charactersService.getAllCharacters(true);
+    }
+
+    @GetMapping("/pagination/{page}")
+    public List<CharactersModel> getAllCharactersPagination(@PathVariable Integer page) {
+        Page<CharactersModel> charactersPage = this.charactersService.getCharactersPagination(page, 5);
+        return charactersPage.getContent(); 
     }
 
     @PutMapping("/{id}")
