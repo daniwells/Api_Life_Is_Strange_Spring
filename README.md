@@ -10,7 +10,7 @@ Toda a nossa documentação foi desenvolvida de forma automática e dinâmica, u
 
 Link: https://app.swaggerhub.com/apis/DANIELLIMAFREITA/apilifeisstrange/1.0.0
 
-## Tecnologias Utilizadas :hammer:
+## Tecnologias utilizadas :hammer:
 * [Java](https://www.java.com/pt-BR/) - Linguagem de Programação
 * [Spring Boot](https://spring.io/) - Framework
 * [Hibernate](https://hibernate.org/) - Ferramenta ORM
@@ -75,7 +75,7 @@ Com isto, você pode efetuar o login.
 
 <b>obs:</b> Esta é a única conta com permissões de acesso ao banco, além de estar registrada nas variáveis do spring.
 
-## Dependências da Aplicação
+## Dependências da aplicação :arrows_clockwise:
 Caso você queira conferir as dependências usadas no projeto, você pode acessar o arquivo <b>[pom.xml](pom.xml)</b>, nele constam todas as bibliotecas e plugins utilizados.
 
 ## Licença :page_with_curl:
