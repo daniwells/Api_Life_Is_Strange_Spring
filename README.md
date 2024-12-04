@@ -75,9 +75,12 @@ Com isto, você pode efetuar o login.
 
 <b>obs:</b> Esta é a única conta com permissões de acesso ao banco, além de estar registrada nas variáveis do spring.
 
+## Dependências da Aplicação
+Caso você queira conferir as dependências usadas no projeto, você pode acessar o arquivo <b>[pom.xml](pom.xml)</b>, nele constam todas as bibliotecas e plugins utilizados.
+
 ## Licença :page_with_curl:
 
-O site Ritmo da Forma está sob a licença [GPL LICENSE](LICENCE).
+A api Life is Strange está sob a licença [GPL LICENSE](LICENCE).
 
 ## Autores :black_nib:
 
